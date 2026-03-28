@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const API = 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const PHASES = [
   { id: 1, name: 'Upload & Extract', icon: 'upload_file' },

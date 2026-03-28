@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { usePipeline } from '../context/PipelineContext';
 import StepIndicator from '../components/StepIndicator';
 
-const API = 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export default function TranslationEditor() {
   const navigate = useNavigate();
@@ -337,7 +337,7 @@ function PreviewModal({ editorData, originalFileBase64, originalFormat, fileName
   const [originalPdfUrl, setOriginalPdfUrl] = useState('');
   const [translatedPdfUrl, setTranslatedPdfUrl] = useState('');
 
-  const API = 'http://localhost:8000';
+  const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
   useEffect(() => {
     renderDocuments();

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { usePipeline } from '../context/PipelineContext';
 import StepIndicator from '../components/StepIndicator';
 
-const API = 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const LANGUAGES = [
   { code: 'es', name: 'Spanish' }, { code: 'fr', name: 'French' },
